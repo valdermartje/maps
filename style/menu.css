@@ -1,0 +1,128 @@
+.menu {
+	position: relative;
+	width: 100%;
+	top: 0;
+	padding: 20px 0;
+	box-shadow: 0 0 20px 0 var(--default-shadow);
+	z-index: 999999999999999;
+	background: var(--primary-color);
+}
+
+.logo {
+	width: fit-content;
+	float: left;
+}
+
+.links {
+	float: right;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 9999999999999;
+}
+
+.links a {
+	padding: 0 20px;
+	text-decoration: unset;
+	color: var(--header-color);
+	font-weight: bold;
+	font-size: 20px;
+	display: inline-block;
+}
+
+.links a:last-of-type {
+	padding-right: 0;
+}
+
+.links a::after {
+	content: "";
+	position: relative;
+	bottom: 0;
+	display: flex;
+	width: 0%;
+	height: 2px;
+	background-color: var(--secondary-color);
+	transition: 300ms;
+}
+
+.links a:hover::after {
+	width: 100%;
+}
+
+.streep {
+	width: 30px;
+	height: 5px;
+	margin: 4px 0;
+	background: var(--secondary-color);
+	z-index: 99999999999;
+}
+
+.overlay-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 60%;
+	background: var(--secondary-color);
+	z-index: 999999;
+	opacity: 0.6;
+	transition: ease-in-out 300ms;
+	display: none;
+}
+
+.mobileLinks {
+	position: relative;
+	height: inherit;
+}
+
+.menuLinks {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translate(-30%, -50%);
+}
+
+.overlay-menu a {
+	color: var(--primary-color);
+	text-decoration: none;
+	display: block;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.overlay-menu a::after {
+	content: "";
+	position: relative;
+	bottom: 0;
+	display: flex;
+	width: 0%;
+	height: 2px;
+	background-color: var(--secondary-color);
+	transition: 300ms;
+}
+
+.overlay-menu a:hover::after {
+	width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+	.menu-mobile {
+		display: none;
+	}
+
+	.streep {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.menu {
+		position: fixed;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.links a {
+		display: none;
+	}
+}

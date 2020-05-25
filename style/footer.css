@@ -1,0 +1,15 @@
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 0 20px 0 var(--default-shadow);
+    display: flex;
+}
+
+.extra-info {
+    margin-left: 10px;
+}
+
+h1.footer-logo {
+    width: fit-content;
+}
